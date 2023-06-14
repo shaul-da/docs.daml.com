@@ -11,7 +11,8 @@ modules:
   Interface that allows implementing templates to create and remove accounts
 - :ref:`Account <module-daml-finance-interface-account-account-92922>`:
   Interface which represents an established relationship between a custodian and an owner. It
-  specifies parties controlling incoming and outgoing transfers, and allows for crediting and
-  debiting holdings
+  specifies the parties required to authorize incoming and outgoing transfers, as well as those
+  responsible for authorizing account freezes. Furthermore, it facilitates the process of crediting
+  and debiting holdings for the account.
 - :ref:`Util <module-daml-finance-interface-account-util-56106>`:
-  Utility functions related to accounts, e.g., getting the custodian or the owner of an account
+  Utility functions related to accounts, e.g., getting the custodian or the owner of an account.

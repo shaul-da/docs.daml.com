@@ -93,13 +93,13 @@ Remarks
 
 There are some assumptions that need to hold in order for the settlement to work in practice:
 
-- Bob needs to have an account at the custodian where Alice's holding is held and vice versa (for
-  an example with intermediaries, see `Route provider`_ below.
+- Bob needs to have an account (which is not frozen) at the custodian where Alice's holding is held
+  and vice versa (for an example with intermediaries, see `Route provider`_ below).
 - Both holdings need to be
-  :ref:`Transferable <type-daml-finance-interface-holding-transferable-transferable-24986>`
+  :ref:`Transferable <type-daml-finance-interface-holding-transferable-transferable-24986>`.
 - The transfer must be fully authorized (i.e., the parties allocating and approving an instruction
   must be the controllers of outgoing and incoming transfers of the corresponding accounts,
-  respectively)
+  respectively.
 
 Also, note that the allocation and approval steps can happen in any order.
 
@@ -124,9 +124,9 @@ original :ref:`Instruction <module-daml-finance-settlement-instruction-87187>`
 between Alice and Bob needs to be replaced by three separate
 :ref:`Instructions <module-daml-finance-settlement-instruction-87187>`:
 
-- **1A**: Alice sends EUR 1000 (held at Bank A) to Bank A
+- **1A**: Alice sends EUR 1000 (held at Bank A) to Bank A.
 - **1B**: Bank A sends EUR 1000 (held at the Central Bank) to Bank B.
-- **1C**: Bank B credits EUR 1000 to Bob's account (held at Bank B)
+- **1C**: Bank B credits EUR 1000 to Bob's account (held at Bank B).
 
 .. image:: ../images/settlement_hierarchy_instructed.png
    :alt: Instructions for intermediated settlement: Alice sends EUR 1000 to Bank A. Bank A sends

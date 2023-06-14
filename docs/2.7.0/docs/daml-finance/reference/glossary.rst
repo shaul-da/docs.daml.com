@@ -14,11 +14,13 @@ meaning of familiar terms.
 Account
 -------
 
-An account contract is a relationship between two parties: a custodian (or account provider) and an
-owner.
+An account contract represents a relationship between two parties: a custodian (or account provider)
+and an owner. It simplifies the process of crediting and debiting `holdings <#holding>`__ for the
+account. The holdings refer to their account by a key.
 
-An account is referenced by `holdings <#holding>`__ and it is used to control who is entitled to
-instruct and receive holding transfers.
+
+The contract also specifies the parties mandated to authorize incoming and outgoing transfers, as
+well as those who hold the responsibility to authorize the freezing of the account.
 
 .. _instrument:
 

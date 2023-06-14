@@ -6,8 +6,8 @@ Intermediated Lifecycling of an Instrument
 
 This tutorial describes the :ref:`lifecycle <lifecycling>` flow of an instrument with an
 intermediary party between the issuer and the investor. We will use the a
-:doc:`Generic Instrument<../../payoff-modeling/generic-extension>`, but the same concepts apply to other instrument
-types as well.
+:doc:`Generic Instrument<../../payoff-modeling/generic-extension>`, but the same concepts apply to
+other instrument types as well.
 
 We will illustrate the following steps:
 

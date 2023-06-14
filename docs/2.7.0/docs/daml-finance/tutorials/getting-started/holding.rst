@@ -227,6 +227,9 @@ The account is also used to determine who actually authorizes incoming and outgo
 the account at hand, the owner acts as a controller for both incoming and outgoing transfers. For an
 other account, you could for example let the custodian be the controller instead.
 
+In addition, an account also stipulates who has the authority to freeze it - in this case, the
+custodian - and consequently disable all incoming and outgoing transfers.
+
 Why do we need factories?
 =========================
 

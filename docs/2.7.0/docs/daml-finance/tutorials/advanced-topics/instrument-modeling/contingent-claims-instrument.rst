@@ -5,8 +5,8 @@ How to Implement a Contingent Claims-Based Instrument
 #####################################################
 
 In this chapter we will look at how to create a strongly typed instrument, which leverages the
-:doc:`Contingent Claims <../../../concepts/contingent-claims>` library. As an example, we will see how
-the
+:doc:`Contingent Claims <../../../concepts/contingent-claims>` library. As an example, we will see
+how the
 :ref:`fixed rate bond instrument <module-daml-finance-instrument-bond-fixedrate-instrument-67993>`
 is implemented in Daml Finance. The goal is that you will learn how to implement your own instrument
 template, if you need an instrument type that is not already implemented in Daml Finance.
@@ -108,8 +108,8 @@ also returns the remaining claims of the instrument (excluding today's and any p
 Hence, we can use this to evolve our instrument, in a way that is guaranteed to be consistent with
 the lifecycle mechanism.
 
-This is all done in the :ref:`Lifecycle.Rule <module-daml-finance-claims-lifecycle-rule-53980>`. We will now break it apart to describe the
-steps in more detail:
+This is all done in the :ref:`Lifecycle.Rule <module-daml-finance-claims-lifecycle-rule-53980>`. We
+will now break it apart to describe the steps in more detail:
 
 .. literalinclude:: ../../../src/main/daml/Daml/Finance/Claims/Lifecycle/Rule.daml
   :language: daml

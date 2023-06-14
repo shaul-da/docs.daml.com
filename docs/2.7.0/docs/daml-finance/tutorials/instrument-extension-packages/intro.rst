@@ -19,4 +19,5 @@ The following tutorials are available:
 * The :doc:`Option Extension <option-extension>` tutorial describes the different types of option
   instruments in Daml Finance.
 
-If you want to learn how to model custom payoffs, you can skip to the next section and have a look at the :doc:`Generic Instrument <../payoff-modeling/generic-extension>` tutorial.
+If you want to learn how to model custom payoffs, you can skip to the next section and have a look
+at the :doc:`Generic Instrument <../payoff-modeling/generic-extension>` tutorial.

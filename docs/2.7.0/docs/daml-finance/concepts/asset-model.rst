@@ -146,13 +146,15 @@ created between the two parties.
 This is similar to how, in the real world, you need to open a bank account before you can use the
 bank’s services.
 
-The account contract also controls which parties are authorized to transfer holdings in and out of
-the account. To be more precise, the
+The account contract also controls which parties have the authority to transfer holdings in and out
+of the account. It also governs who has ability to freeze the account. Once an account is frozen,
+both incoming and outgoing transfers are effectively disabled. To be more precise, the
 :ref:`controllers <type-daml-finance-interface-account-account-controllers-36430>`
-field of the account contains:
+field of the account contains 3 sets:
 
-- ``outgoing``: a set of parties authorizing outgoing transfers
-- ``incoming``: a set of parties authorizing incoming transfers
+- ``outgoing``: all parties required to authorize outgoing transfers
+- ``incoming``: all parties required to authorize incoming transfers
+- ``freezers``: all parties required to authorize a freeze
 
 This allows for modeling various controllers of transfers between Alice's and Bob's accounts. For
 example:
@@ -181,7 +183,8 @@ Keys
 ====
 
 Accounts are keyed by an
-:ref:`AccountKey <type-daml-finance-interface-types-common-types-accountkey-41482>`, which comprises:
+:ref:`AccountKey <type-daml-finance-interface-types-common-types-accountkey-41482>`, which
+comprises:
 
 - the account ``owner``
 - the account ``custodian``
@@ -204,10 +207,11 @@ A base account implementation is provided in
 
 The account can be created with arbitrary
 :ref:`controllers <type-daml-finance-interface-account-account-controllers-36430>`
-(for incoming and outgoing transfers).
+(for incoming and outgoing transfers, as well as freezes of the account).
 
-In our examples, we typically let accounts be owners-controlled, i.e., both the current owner and
-the new owner must authorize transfers.
+In our examples, we typically adopt an owner-controlled approach for accounts. This means that both
+the current owner and the new owner are required to authorize transfers. Additionally, we grant the
+custodian the authority to freeze the account.
 
 Examples
 ********
