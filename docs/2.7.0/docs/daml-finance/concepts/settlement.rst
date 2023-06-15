@@ -99,7 +99,7 @@ There are some assumptions that need to hold in order for the settlement to work
   :ref:`Transferable <type-daml-finance-interface-holding-transferable-transferable-24986>`.
 - The transfer must be fully authorized (i.e., the parties allocating and approving an instruction
   must be the controllers of outgoing and incoming transfers of the corresponding accounts,
-  respectively.
+  respectively).
 
 Also, note that the allocation and approval steps can happen in any order.
 
