@@ -142,7 +142,7 @@ JWT Authorization
 ^^^^^^^^^^^^^^^^^
 
 The Ledger Api supports `JWT <https://jwt.io/>`_ based authorization checks as described in the
-:doc:`Authorization documentation </app-dev/authorization>`.
+Authorization documentation.
 
 In order to enable JWT authorization checks, your safe configuration options are
 
